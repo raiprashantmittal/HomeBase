@@ -1,0 +1,30 @@
+.profile-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.profile-card h1 {
+  margin-bottom: 20px;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 14px;
+}
+
+.profile-row:last-of-type {
+  border-bottom: none;
+}
+
+.password-confirm {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 6px;
+}

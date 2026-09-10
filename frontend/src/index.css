@@ -1,0 +1,150 @@
+:root {
+  /* Color */
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --ink: #1e2723;
+  --ink-soft: #5b665f;
+  --ink-faint: #8a9289;
+  --pine: #2f5d4c;
+  --pine-deep: #223f34;
+  --gold: #a9791f;
+  --rust: #a8452a;
+  --line: #e4e0d6;
+  --line-soft: #edeae1;
+
+  /* Type */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Layout */
+  --radius: 10px;
+  --sidebar-width: 240px;
+}
+
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 2px;
+}
+
+.btn {
+  border: none;
+  border-radius: 7px;
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--pine);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--pine-deep);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+
+.btn-ghost:hover {
+  border-color: var(--ink-faint);
+  color: var(--ink);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.field label {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.field input,
+.field select {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 9px 11px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--pine);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

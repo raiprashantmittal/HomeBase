@@ -1,0 +1,138 @@
+.dash-header {
+  margin-bottom: 28px;
+}
+
+.dash-sub {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-areas:
+    'due money'
+    'due tasks';
+  gap: 16px;
+}
+
+.due-card {
+  grid-area: due;
+}
+.money-card {
+  grid-area: money;
+}
+.tasks-card {
+  grid-area: tasks;
+}
+
+.dash-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.dash-card h2 {
+  margin-bottom: 16px;
+}
+
+.muted {
+  color: var(--ink-faint);
+  font-size: 14px;
+}
+
+.due-list,
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.due-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 14px;
+}
+
+.due-row:last-child {
+  border-bottom: none;
+}
+
+.due-date {
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  width: 48px;
+  flex-shrink: 0;
+}
+
+.due-type {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.care-tag {
+  background: rgba(47, 93, 76, 0.12);
+  color: var(--pine);
+}
+
+.money-tag {
+  background: rgba(169, 121, 31, 0.14);
+  color: var(--gold);
+}
+
+.due-title {
+  flex: 1;
+}
+
+.due-amount {
+  font-variant-numeric: tabular-nums;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.big-number {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 14px;
+}
+
+.task-row:last-child {
+  border-bottom: none;
+}
+
+.task-owner {
+  color: var(--ink-faint);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 780px) {
+  .dash-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'due'
+      'money'
+      'tasks';
+  }
+}

@@ -1,0 +1,239 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background: var(--pine-deep);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 18px;
+}
+
+.brand {
+  margin-bottom: 28px;
+}
+
+.brand-mark {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.family-switcher {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.family-switcher label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+}
+
+.family-switcher select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.08);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='white' stroke-width='1.6'><path d='M6 8l4 4 4-4' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 32px 10px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.family-switcher select:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+.family-switcher select:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+}
+.family-switcher select option {
+  background: var(--pine-deep);
+  color: #fff;
+}
+
+.quick-invite {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.invite-code-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 7px;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+}
+
+.invite-code-chip:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.invite-code-chip code {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+.muted-light {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.copied-tag {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 11px;
+  color: #a9e4b0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  margin-top: 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.nav-icon {
+  width: 18px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: transparent;
+  border: none;
+  padding: 6px 2px;
+  text-align: left;
+  color: #fff;
+}
+
+.user-chip:hover .user-name {
+  text-decoration: underline;
+}
+
+.user-name {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.btn.small {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.sidebar-footer .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sidebar-footer .btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+  padding: 36px 44px;
+  max-width: 980px;
+}
+
+.empty-state {
+  max-width: 380px;
+  margin-top: 60px;
+}
+
+.empty-state h2 {
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 780px) {
+  .shell {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 14px 16px;
+  }
+  .family-switcher,
+  .nav,
+  .sidebar-footer {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .content {
+    padding: 24px 20px;
+  }
+}
